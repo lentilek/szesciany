@@ -17,7 +17,7 @@ public class TriggerControlDeath : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        SceneManager.LoadScene("SampleScene");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); build index in the build settings>>file
+        //SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //build index in the build settings>>file
     }
 }
