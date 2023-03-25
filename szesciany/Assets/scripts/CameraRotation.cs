@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraRotation : MonoBehaviour
 {
     public Vector2 turn;
-    public float sensitivity = .5f;
+    public float sensitivity = 2f;
 
     void Update()
     {
