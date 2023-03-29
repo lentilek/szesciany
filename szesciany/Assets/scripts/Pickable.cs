@@ -10,6 +10,7 @@ public class Pickable : MonoBehaviour
 
         if (playerInventory != null)
         {
+            SoundManagerScript.PlaySound("collectsound"); // powinno wtedy wydawaæ dŸwiêk zebrania -martyna
             playerInventory.PickupsCollected();
             gameObject.SetActive(false); //set pickable as inactive once collected // so once it collides and is collected by player it increases the number of pickables collected and then gets deactivated
         }

@@ -27,6 +27,7 @@ public class CubeMovement : MonoBehaviour
         //jump key = space in the input >> project manager >> InputManager 
         if (Input.GetButtonDown("Jump") && cubeIsOnTheGround) //&& = AND operator
         {
+            SoundManagerScript.PlaySound("jumpsound"); // powinno wtedy wydawaæ dŸwiêk skoku -martyna
             rb.AddForce(new Vector3(0, 7, 0), ForceMode.Impulse); //on each frame it adds this value of Y to the cube
             cubeIsOnTheGround = false; //whenever we press SPACE cube ISNT on the ground
         }
