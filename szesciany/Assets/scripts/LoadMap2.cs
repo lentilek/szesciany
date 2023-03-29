@@ -10,7 +10,7 @@ public class LoadMap2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerInventory playerInventory = other.GetComponent<PlayerInventory>(); // to check if the collission is with the player, get the player's inventory component from the object that has been collided with
+        PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
 
         if (playerInventory.NumberOfPickups >= neededPickUps)
         {
