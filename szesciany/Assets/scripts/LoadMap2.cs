@@ -12,8 +12,10 @@ public class LoadMap2 : MonoBehaviour
     {
         PlayerInventory playerInventory = other.GetComponent<PlayerInventory>(); // to check if the collission is with the player, get the player's inventory component from the object that has been collided with
 
+        
         if (playerInventory.NumberOfPickups >= neededPickUps)
         {
+            
             SceneManager.LoadScene(toLoad);
         }
 
@@ -21,7 +23,7 @@ public class LoadMap2 : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-
+        
     }
 
     private void OnTriggerExit(Collider other)
