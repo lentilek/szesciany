@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TriggerControlDeath : MonoBehaviour
 {
-    public GameObject deathParticle;
+    //public GameObject deathParticle;
     public ParticleSystem death;
     public float timer = 0;
     public float howLong = 3;
