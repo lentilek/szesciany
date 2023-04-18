@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    public Transform camTarget;
+    public float pLerp = .02f;
+    public float rLerp = .01f;
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        transform.Rotate(1f * Time.deltaTime, 0, 0);
+        //transform.Rotate(1f * Time.deltaTime, 0, 0);
+        transform.position = Vector3.Lerp(transform.position, camTarget.position, pLerp);
+        transform.rotation = Quaternion.Lerp(transform.rotation, camTarget.rotation, rLerp);
     }
 }
