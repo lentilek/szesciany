@@ -7,7 +7,12 @@ using UnityEngine.Rendering;
 public class CubeMovement : MonoBehaviour
 {
     public float speed = 5f; //public so it appears in unity and sets basic speed to 5
+    private float normalSpeed;
+    public float boostedSpeed;
+    public float speedCoolDown;
+
     public Rigidbody rb; //initialize Rigidbody component
+
     public bool cubeIsOnTheGround = true; //bool = returned as TRUE or FALSE; to check if floor is on the ground 
 
     void Start()
@@ -17,6 +22,7 @@ public class CubeMovement : MonoBehaviour
 
     void Update()
     {
+        normalSpeed = speed;
         //MOVING MECHANIC HERE//
         float horizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed; //time.deltaTime so it updates once per second
         float vertical = Input.GetAxis("Vertical") * Time.deltaTime * speed;
@@ -40,4 +46,45 @@ public class CubeMovement : MonoBehaviour
             cubeIsOnTheGround = true; //so the jump only works ONCE and we can't keep pressing space in mid-air
         }
     }
+
+    /*private void OnCollisionEnter(Collider hit)
+    {
+        switch (hit.gameObject.tag)
+        {
+            case "SpeedBoost":
+                speed = 150f;
+                break;
+            //case "Ground":
+                //speed = 5f;
+                //break;
+        }
+    }
+    */
+    
+
+    //tag comparison
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("SpeedBoost"))
+        {
+            speed = boostedSpeed;
+            StartCoroutine("SpeedDuration");
+        }
+        if (other.CompareTag("JumpPad"))
+        {
+            rb.AddForce(new Vector3(0, 20, 0), ForceMode.Impulse);
+        }
+
+
+    }
+
+    IEnumerator SpeedDuration() //allows you to time something, do something after a certain amount of time
+    {
+        yield return new WaitForSeconds(speedCoolDown); //its basically saying to this and go into here, wait for an amount of seconds set and then to this
+        speed = 7f;
+    }
+
+
+
+
 }
