@@ -223,6 +223,8 @@ MonoBehaviour:
   timer: 0
   howLong: 3
   isDead: 0
+  player: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!65 &306441504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1288,5 +1290,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camTarget: {fileID: 528375860}
-  pLerp: 0.02
-  rLerp: 0.01
+  pLerp: 1
+  rLerp: 1
