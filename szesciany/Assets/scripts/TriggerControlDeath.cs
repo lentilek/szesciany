@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class TriggerControlDeath : MonoBehaviour
 {
-    //public GameObject deathParticle;
     public ParticleSystem death;
     public float timer = 0;
-    public float howLong = 3;
+    public float howLong = 3; 
     public bool isDead = false;
 
+    [SerializeField] GameObject player;
+    [SerializeField] Transform spawnPoint;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -30,18 +31,15 @@ public class TriggerControlDeath : MonoBehaviour
             timer += Time.deltaTime;
             if(timer >= howLong)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                RespawnPoint();
             }
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
 
-    }
-
-    private void OnTriggerExit(Collider other)
+    void RespawnPoint()
     {
-        //SceneManager.LoadScene("SampleScene");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //build index in the build settings>>file
+        player.transform.position = spawnPoint.transform.position;
+        player.SetActive(true);
+        isDead= false;
     }
 }

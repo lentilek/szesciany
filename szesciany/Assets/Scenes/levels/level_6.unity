@@ -157,6 +157,8 @@ MonoBehaviour:
   timer: 0
   howLong: 3
   isDead: 0
+  player: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!65 &229436688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -479,7 +481,7 @@ GameObject:
   - component: {fileID: 1149734675}
   - component: {fileID: 1149734679}
   m_Layer: 0
-  m_Name: Main Camera (2)
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -597,8 +599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camTarget: {fileID: 1382445794}
-  pLerp: 0.02
-  rLerp: 0.01
+  pLerp: 1
+  rLerp: 1
 --- !u!1 &1203029251
 GameObject:
   m_ObjectHideFlags: 0
