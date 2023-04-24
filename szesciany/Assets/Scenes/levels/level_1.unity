@@ -5050,6 +5050,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2237615684231170802, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 2341496132667953804, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
       propertyPath: m_Name
       value: player
@@ -5136,11 +5140,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.26
+      value: 3.25
       objectReference: {fileID: 0}
     - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
       propertyPath: m_LocalPosition.z
       value: -9.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9862857
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.16504757
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360453279643368317, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: lookUpMax
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360453279643368317, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: lookUpMin
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 7798968782344291308, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
       propertyPath: m_RootOrder
