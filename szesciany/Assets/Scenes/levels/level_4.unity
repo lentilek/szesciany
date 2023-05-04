@@ -387,20 +387,8 @@ PrefabInstance:
       value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 3496184943420900785, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 528375861}
-    - target: {fileID: 3496184943420900785, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
       propertyPath: speed
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3496184943420900785, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
-      propertyPath: boostedSpeed
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3496184943420900785, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
-      propertyPath: speedCoolDown
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
@@ -440,11 +428,6 @@ MonoBehaviour:
 --- !u!4 &528375860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
-  m_PrefabInstance: {fileID: 528375857}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &528375861 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3433895275019099595, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
   m_PrefabInstance: {fileID: 528375857}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &729684290 stripped
@@ -1307,8 +1290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camTarget: {fileID: 528375860}
-  pLerp: 0.02
-  rLerp: 0.01
+  pLerp: 1
+  rLerp: 1
 --- !u!1001 &2549373242059136980
 PrefabInstance:
   m_ObjectHideFlags: 0

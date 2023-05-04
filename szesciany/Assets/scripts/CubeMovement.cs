@@ -6,10 +6,11 @@ using UnityEngine.Rendering;
 
 public class CubeMovement : MonoBehaviour
 {
-    public float speed1 = 5f; //public so it appears in unity and sets basic speed to 5
+    public float speed1; //public so it appears in unity and sets basic speed to 5
     private float normalSpeed;
     public float boostedSpeed;
     public float speedCoolDown;
+    public float jumpPad;
 
     public float speed2 = 0.5f; // speed in air
     public Rigidbody rb; //initialize Rigidbody component
@@ -20,11 +21,12 @@ public class CubeMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>(); //references to the rigidbody comp
+        normalSpeed = speed1;
     }
 
     void Update()
     {
-        normalSpeed = speed1;
+        
         //MOVING MECHANIC HERE//
 
        //transform.Translate(horizontal, 0, vertical); //can move on X and Z axis, not up and down on the Y
@@ -89,7 +91,7 @@ public class CubeMovement : MonoBehaviour
         }
         if (other.CompareTag("JumpPad"))
         {
-            rb.AddForce(new Vector3(0, 20, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, jumpPad, 0), ForceMode.Impulse);
         }
 
 
@@ -98,7 +100,7 @@ public class CubeMovement : MonoBehaviour
     IEnumerator SpeedDuration() //allows you to time something, do something after a certain amount of time
     {
         yield return new WaitForSeconds(speedCoolDown); //its basically saying to this and go into here, wait for an amount of seconds set and then to this
-        speed1 = 7f;
+        speed1 = normalSpeed;
     }
 
 
