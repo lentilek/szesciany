@@ -847,6 +847,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -1378,6 +1379,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.66, y: 0.8152962, z: -32.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1386327451}
   - {fileID: 1537793516}
@@ -3267,6 +3269,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.250912, y: 2.093217, z: -32.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -4921,6 +4924,7 @@ Transform:
   m_LocalRotation: {x: -0.054255128, y: 0.03145074, z: -0.0017140922, w: 0.99803025}
   m_LocalPosition: {x: 8.510714, y: 0.25941896, z: 68.3356}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1069389475}
   m_RootOrder: 0
@@ -5799,6 +5803,7 @@ Transform:
   m_LocalRotation: {x: 0.054255128, y: -0.03145074, z: 0.0017140922, w: 0.99803025}
   m_LocalPosition: {x: 2.2309117, y: 5.103216, z: -42.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1013395761}
   m_Father: {fileID: 0}
@@ -6721,6 +6726,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -9523,6 +9529,7 @@ Transform:
   m_LocalRotation: {x: 0.054255128, y: -0.03145074, z: 0.0017140922, w: 0.99803025}
   m_LocalPosition: {x: 2.46, y: 5.5, z: -45.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -9821,6 +9828,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.1, y: -10.8, z: -14.7}
   m_LocalScale: {x: 100, y: 1, z: 100}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1003754144}
   m_Father: {fileID: 0}

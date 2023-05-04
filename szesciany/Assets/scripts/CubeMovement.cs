@@ -7,8 +7,13 @@ using UnityEngine.Rendering;
 public class CubeMovement : MonoBehaviour
 {
     public float speed1 = 5f; //public so it appears in unity and sets basic speed to 5
+    private float normalSpeed;
+    public float boostedSpeed;
+    public float speedCoolDown;
+
     public float speed2 = 0.5f; // speed in air
     public Rigidbody rb; //initialize Rigidbody component
+
     public bool cubeIsOnTheGround = true; //bool = returned as TRUE or FALSE; to check if floor is on the ground 
     public float jumpForce = 10;
 
@@ -19,6 +24,7 @@ public class CubeMovement : MonoBehaviour
 
     void Update()
     {
+        normalSpeed = speed1;
         //MOVING MECHANIC HERE//
 
        //transform.Translate(horizontal, 0, vertical); //can move on X and Z axis, not up and down on the Y
@@ -27,7 +33,7 @@ public class CubeMovement : MonoBehaviour
         //jump key = space in the input >> project manager >> InputManager 
         if (Input.GetButtonDown("Jump") && cubeIsOnTheGround) //&& = AND operator
         {
-            SoundManagerScript.PlaySound("jumpsound"); // powinno wtedy wydawaæ dŸwiêk skoku -martyna
+            SoundManagerScript.PlaySound("jumpsound"); // powinno wtedy wydawaï¿½ dï¿½wiï¿½k skoku -martyna
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse); //on each frame it adds this value of Y to the cube
             cubeIsOnTheGround = false; //whenever we press SPACE cube ISNT on the ground
         }
@@ -57,4 +63,45 @@ public class CubeMovement : MonoBehaviour
             cubeIsOnTheGround = true; //so the jump only works ONCE and we can't keep pressing space in mid-air
         }
     }
+
+    /*private void OnCollisionEnter(Collider hit)
+    {
+        switch (hit.gameObject.tag)
+        {
+            case "SpeedBoost":
+                speed = 150f;
+                break;
+            //case "Ground":
+                //speed = 5f;
+                //break;
+        }
+    }
+    */
+    
+
+    //tag comparison
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("SpeedBoost"))
+        {
+            speed1 = boostedSpeed;
+            StartCoroutine("SpeedDuration");
+        }
+        if (other.CompareTag("JumpPad"))
+        {
+            rb.AddForce(new Vector3(0, 20, 0), ForceMode.Impulse);
+        }
+
+
+    }
+
+    IEnumerator SpeedDuration() //allows you to time something, do something after a certain amount of time
+    {
+        yield return new WaitForSeconds(speedCoolDown); //its basically saying to this and go into here, wait for an amount of seconds set and then to this
+        speed1 = 7f;
+    }
+
+
+
+
 }
