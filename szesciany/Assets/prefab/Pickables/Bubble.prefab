@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 7083920580256070628}
   - component: {fileID: 7083920580256070629}
   m_Layer: 0
-  m_Name: Pickable
+  m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,3 +153,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1ef97c1a1b34648872be7d83c51402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickable: {fileID: 11400000, guid: f7e213bd289ce7345933adcdf4cef683, type: 2}

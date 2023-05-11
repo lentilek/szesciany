@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadMap2 : MonoBehaviour
 {
-    public int neededPickUps = 3;
+    public PickableTypes meta;
     public string toLoad = "level_2";
 
     private void OnTriggerEnter(Collider other)
@@ -13,7 +13,7 @@ public class LoadMap2 : MonoBehaviour
         PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
 
         
-        if (playerInventory.NumberOfPickups >= neededPickUps)
+        if (playerInventory.numberOfPickupsMeta >= meta.toCollect)
         {
             
             SceneManager.LoadScene(toLoad);
@@ -21,13 +21,4 @@ public class LoadMap2 : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        
-    }
 }

@@ -98,7 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22197c8f34d014d4e95c380442231245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed1: 5
+  boostedSpeed: 0
+  speedCoolDown: 0
+  jumpPad: 0
+  speed2: 0.5
   rb: {fileID: 0}
   cubeIsOnTheGround: 1
   jumpForce: 10
@@ -153,7 +157,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4329867986165268620}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e48a4cec8985c9349b64e18b3bcf0026, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -206,6 +210,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turn: {x: 0, y: 0}
   sensitivity: 0.5
+  lookUpMax: 20
+  lookUpMin: -60
+  lookLeft: -90
+  lookRight: 90
 --- !u!1 &8547483026187319815
 GameObject:
   m_ObjectHideFlags: 0

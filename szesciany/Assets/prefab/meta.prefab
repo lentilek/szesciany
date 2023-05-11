@@ -108,5 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b95d19cb79cd945a33d799e922ea64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neededPickUps: 3
+  meta: {fileID: 11400000, guid: f7e213bd289ce7345933adcdf4cef683, type: 2}
   toLoad: level_2
