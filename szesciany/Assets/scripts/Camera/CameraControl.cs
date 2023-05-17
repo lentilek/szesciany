@@ -15,10 +15,10 @@ public class CameraControl : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, camTarget.rotation, rLerp);
 
 
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-        }
+        }*/
     }
 }
