@@ -87,7 +87,7 @@ public class CubeMovement : MonoBehaviour
         if (other.CompareTag("SpeedBoost"))
         {
             speed1 = boostedSpeed;
-            StartCoroutine("SpeedDuration");
+            StartCoroutine(SpeedDuration());
         }
         if (other.CompareTag("JumpPad"))
         {
