@@ -183,7 +183,7 @@ Transform:
   m_Children:
   - {fileID: 1507329183}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &322035805
 PrefabInstance:
@@ -657,6 +657,7 @@ MonoBehaviour:
   camTarget: {fileID: 1382445794}
   pLerp: 1
   rLerp: 1
+  LM: {fileID: 0}
 --- !u!114 &1149734680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,6 +1227,10 @@ PrefabInstance:
     - target: {fileID: 3951427609677837983, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5655417813679815970, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
+      propertyPath: toLoad
+      value: level_6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
