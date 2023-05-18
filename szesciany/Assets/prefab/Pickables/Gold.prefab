@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7083920579302929596}
   - component: {fileID: 7083920579302929593}
   - component: {fileID: 7083920579302929598}
-  - component: {fileID: 7083920579302929599}
+  - component: {fileID: 5925740899994008787}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7083920579302929597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 7.907223, y: 7.907223, z: 7.907223}
   m_Children: []
   m_Father: {fileID: 7083920580256070631}
   m_RootOrder: 0
@@ -40,7 +40,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7083920579302929597}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: e365b4b0a80f40d42ad44635e73c60e5, type: 3}
 --- !u!23 &7083920579302929598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bcebce25b58c35047bbe147f14d44380, type: 2}
+  - {fileID: 2100000, guid: e068cd9f61272274fbc7abdad5803e1e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7083920579302929599
-SphereCollider:
+--- !u!65 &5925740899994008787
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,8 +93,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.21168444, y: 0.22603473, z: 0.16077477}
+  m_Center: {x: 0.000000018626451, y: 0.113017336, z: -0.000000011175871}
 --- !u!1 &7083920580256070650
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,8 +139,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.3571954, y: 2.0228643, z: 1.9354138}
+  m_Center: {x: -0.019598246, y: 0.940634, z: 0.019943714}
 --- !u!114 &7083920580256070629
 MonoBehaviour:
   m_ObjectHideFlags: 0
