@@ -1700,7 +1700,7 @@ Transform:
   m_Children:
   - {fileID: 271729965}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &519791465
 PrefabInstance:
@@ -3774,7 +3774,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1246753781
 GameObject:
@@ -3789,6 +3789,7 @@ GameObject:
   - component: {fileID: 1246753783}
   - component: {fileID: 1246753782}
   - component: {fileID: 1246753786}
+  - component: {fileID: 1246753787}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3893,7 +3894,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1246753786
 MonoBehaviour:
@@ -5285,7 +5286,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1660327503
 PrefabInstance:
@@ -5724,11 +5725,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5655417813679815970, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
+      propertyPath: toLoad
+      value: level_5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
 --- !u!114 &1767493468 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3951427610602424429, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
+  m_CorrespondingSourceObject: {fileID: 447724887127853114, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
   m_PrefabInstance: {fileID: 1767493467}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -6343,9 +6348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   death: {fileID: 387586371}
-  timer: 0
   howLong: 3
-  isDead: 0
   player: {fileID: 0}
   spawnPoint: {fileID: 0}
 --- !u!65 &1912314597
@@ -6374,7 +6377,7 @@ Transform:
   m_Children:
   - {fileID: 387586372}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1922522355
 PrefabInstance:
@@ -6553,6 +6556,38 @@ PrefabInstance:
       propertyPath: speed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9862857
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.16504757
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360453279643368317, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: lookUpMax
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
 --- !u!1 &1969278475 stripped
@@ -6573,16 +6608,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meta: {fileID: 208890094}
+  toOpen: {fileID: 0}
   OnPickableCollected:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1767493468}
         m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
         m_MethodName: UpdatePickableText
-        m_Mode: 0
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1969278476}
+          m_ObjectArgumentAssemblyTypeName: PlayerInventory, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1767493468}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: UpdatePickableTextDoor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1969278476}
+          m_ObjectArgumentAssemblyTypeName: PlayerInventory, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1767493468}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: UpdatePickableTextGold
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1969278476}
+          m_ObjectArgumentAssemblyTypeName: PlayerInventory, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

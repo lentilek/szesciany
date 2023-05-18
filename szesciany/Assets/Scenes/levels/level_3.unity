@@ -418,7 +418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168620215}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.92, y: 2.48, z: -2.73}
+  m_LocalPosition: {x: -2.92, y: 2.48, z: -25.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 186635812}
   - component: {fileID: 186635811}
   - component: {fileID: 186635815}
+  - component: {fileID: 186635816}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -558,6 +559,39 @@ MonoBehaviour:
   camTarget: {fileID: 284443721}
   pLerp: 1
   rLerp: 1
+  LM: {fileID: 0}
+--- !u!114 &186635816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186635810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &189836158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -744,6 +778,38 @@ PrefabInstance:
     - target: {fileID: 3496184943420900785, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
       propertyPath: speed
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9862857
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.16504757
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202783999482876307, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360453279643368317, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
+      propertyPath: lookUpMax
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff42f40fe6ec8de43920c25f6ebca277, type: 3}
@@ -2343,16 +2409,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meta: {fileID: 1438286314}
+  toOpen: {fileID: 0}
   OnPickableCollected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 81991996}
+      - m_Target: {fileID: 2003866506}
         m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
         m_MethodName: UpdatePickableText
-        m_Mode: 0
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 857748752}
+          m_ObjectArgumentAssemblyTypeName: PlayerInventory, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2003866506}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: UpdatePickableTextDoor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 857748752}
+          m_ObjectArgumentAssemblyTypeName: PlayerInventory, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2003866506}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: UpdatePickableTextGold
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 857748752}
+          m_ObjectArgumentAssemblyTypeName: PlayerInventory, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3122,9 +3213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   death: {fileID: 562992040}
-  timer: 0
   howLong: 3
-  isDead: 0
   player: {fileID: 857748751}
   spawnPoint: {fileID: 168620216}
 --- !u!65 &1089813315
@@ -4627,8 +4716,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5655417813679815970, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
+      propertyPath: toLoad
+      value: level_3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
+--- !u!114 &2003866506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 447724887127853114, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
+  m_PrefabInstance: {fileID: 2003866505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef5653a1b0e9fc4e8f321787eaa8216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2050340547
 PrefabInstance:
   m_ObjectHideFlags: 0

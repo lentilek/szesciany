@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 public class TriggerControlDeath : MonoBehaviour
 {
     public ParticleSystem death;
-    public float timer = 0;
     public float howLong = 3; 
-    public bool isDead = false;
 
     [SerializeField] GameObject player;
     [SerializeField] Transform spawnPoint;
@@ -16,23 +14,10 @@ public class TriggerControlDeath : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isDead = true;
-            timer = 0;
             other.gameObject.SetActive(false);
  
             death.Play();
-        }
-
-    }
-    private void Update()
-    {
-        if(isDead)
-        {
-            timer += Time.deltaTime;
-            if(timer >= howLong)
-            {
-                RespawnPoint();
-            }
+            StartCoroutine(IsDead());
         }
     }
 
@@ -40,6 +25,11 @@ public class TriggerControlDeath : MonoBehaviour
     {
         player.transform.position = spawnPoint.transform.position;
         player.SetActive(true);
-        isDead= false;
+    }
+
+    IEnumerator IsDead()
+    {
+        yield return new WaitForSeconds(howLong);
+        RespawnPoint();
     }
 }

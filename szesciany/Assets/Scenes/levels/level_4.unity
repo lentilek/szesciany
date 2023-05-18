@@ -676,9 +676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   death: {fileID: 777704253}
-  timer: 0
   howLong: 3
-  isDead: 0
   player: {fileID: 0}
   spawnPoint: {fileID: 0}
 --- !u!65 &306441504
@@ -1208,16 +1206,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meta: {fileID: 513548651}
+  toOpen: {fileID: 0}
   OnPickableCollected:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1388319081}
         m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
         m_MethodName: UpdatePickableText
-        m_Mode: 0
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 528375859}
+          m_ObjectArgumentAssemblyTypeName: PlayerInventory, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1388319081}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: UpdatePickableTextDoor
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 528375859}
+          m_ObjectArgumentAssemblyTypeName: PlayerInventory, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1388319081}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: UpdatePickableTextGold
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 528375859}
+          m_ObjectArgumentAssemblyTypeName: PlayerInventory, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1600,7 +1623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7740075420200543538, guid: c16e228285d436e43bd4d7b7525b1c6a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 30
+      value: 68.1
       objectReference: {fileID: 0}
     - target: {fileID: 7740075420200543538, guid: c16e228285d436e43bd4d7b7525b1c6a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1612,7 +1635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7740075420200543538, guid: c16e228285d436e43bd4d7b7525b1c6a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.95
+      value: 12.3
       objectReference: {fileID: 0}
     - target: {fileID: 7740075420200543538, guid: c16e228285d436e43bd4d7b7525b1c6a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2592,11 +2615,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5655417813679815970, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
+      propertyPath: toLoad
+      value: level_4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
 --- !u!114 &1388319081 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3951427610602424429, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
+  m_CorrespondingSourceObject: {fileID: 447724887127853114, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
   m_PrefabInstance: {fileID: 1388319080}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -3381,6 +3408,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1707927252
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.093595
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0932178
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.503605
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268334, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1563131745739268336, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
+      propertyPath: m_Name
+      value: Global Volume
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e9014c9f040b17348a4f0155bcaca248, type: 3}
 --- !u!1 &1729156815
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,6 +3478,7 @@ GameObject:
   - component: {fileID: 1729156817}
   - component: {fileID: 1729156816}
   - component: {fileID: 1729156820}
+  - component: {fileID: 1729156821}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
