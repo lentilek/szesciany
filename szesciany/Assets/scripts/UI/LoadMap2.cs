@@ -13,6 +13,7 @@ public class LoadMap2 : MonoBehaviour
     public PlayerInventory pi;
     public TextMeshProUGUI points;
     public TextMeshProUGUI timer;
+    public bool UI = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,6 +23,7 @@ public class LoadMap2 : MonoBehaviour
         if (playerInventory.numberOfPickupsMeta >= meta.toCollect)
         {
             nextLvlUI.SetActive(true);
+            UI = true;
             timer.text = "Time Left: " + time.time.ToString();
             points.text = "Points: " + pi.numberOfPickupsGold.ToString();
         }

@@ -9717,6 +9717,7 @@ MonoBehaviour:
   camTarget: {fileID: 1800595129}
   pLerp: 1
   rLerp: 1
+  LM: {fileID: 1303521030}
 --- !u!114 &1664947777
 MonoBehaviour:
   m_ObjectHideFlags: 0
