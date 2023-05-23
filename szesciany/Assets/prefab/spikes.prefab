@@ -111,9 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   death: {fileID: 7053568329747278983}
-  timer: 0
   howLong: 3
-  isDead: 0
   player: {fileID: 0}
   spawnPoint: {fileID: 0}
 --- !u!65 &-2085519323898512594
