@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 7083920580256070628}
   - component: {fileID: 7083920580256070629}
   m_Layer: 0
-  m_Name: Gold
+  m_Name: Cake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
