@@ -18,6 +18,7 @@ public class TriggerControlDeath : MonoBehaviour
  
             death.Play();
             StartCoroutine(IsDead());
+            SoundManagerScript.PlaySound("deathsound");
         }
     }
 
@@ -31,5 +32,6 @@ public class TriggerControlDeath : MonoBehaviour
     {
         yield return new WaitForSeconds(howLong);
         RespawnPoint();
+        
     }
 }
