@@ -12,6 +12,10 @@ public class CubeMovement : MonoBehaviour
     public float speedCoolDown;
     public float jumpPad;
 
+    //do dasha
+    public float dash;
+    public GameObject DashDestroy;
+
     public float speed2 = 0.5f; // speed in air
     public Rigidbody rb; //initialize Rigidbody component
 
@@ -38,6 +42,11 @@ public class CubeMovement : MonoBehaviour
             SoundManagerScript.PlaySound("jumpsound"); // powinno wtedy wydawa� d�wi�k skoku -martyna
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse); //on each frame it adds this value of Y to the cube
             cubeIsOnTheGround = false; //whenever we press SPACE cube ISNT on the ground
+        }
+        //dash
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            rb.AddForce(new Vector3(0, 0, dash), ForceMode.Impulse);
         }
     }
 
@@ -93,6 +102,10 @@ public class CubeMovement : MonoBehaviour
         {
             rb.AddForce(new Vector3(0, jumpPad, 0), ForceMode.Impulse);
         }
+        if (other.CompareTag("Dash"))
+        {
+            Destroy(DashDestroy);
+        }
 
 
     }
@@ -102,6 +115,8 @@ public class CubeMovement : MonoBehaviour
         yield return new WaitForSeconds(speedCoolDown); //its basically saying to this and go into here, wait for an amount of seconds set and then to this
         speed1 = normalSpeed;
     }
+    
+
 
 
 
