@@ -4,25 +4,30 @@ using UnityEngine;
 
 public class Skale : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float timeSmall = 2f;
+    private float betweenTime = 7f;
+    private bool canBeSmall = true;
 
-    // Update is called once per frame
      void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            transform.localScale = new Vector3( 1,1 ,1 );
-        }
-
-         if (Input.GetKeyDown(KeyCode.Z))
+         if (Input.GetKeyDown(KeyCode.Z) && canBeSmall)
         {
             transform.localScale = new Vector3(0.5f,0.5f,0.5f);
+            StartCoroutine(Small());
+            StartCoroutine(CantBeSmall());
+            canBeSmall= false;
         }
         
+    }
+    IEnumerator Small()
+    {
+        yield return new WaitForSeconds(timeSmall);
+        transform.localScale = new Vector3(1, 1, 1);
+    }
+    IEnumerator CantBeSmall()
+    {
+        yield return new WaitForSeconds(betweenTime);
+        canBeSmall= true;
     }
 }
 

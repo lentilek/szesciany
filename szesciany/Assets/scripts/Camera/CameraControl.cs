@@ -17,7 +17,12 @@ public class CameraControl : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, camTarget.rotation, rLerp);
 
 
-        if (Input.GetMouseButtonDown(0) && !LM.UI && !PM.isPaused)
+       
+    }
+
+    private void Update()
+    {
+         if (Input.GetMouseButtonDown(0) && !LM.UI && !PM.isPaused)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
