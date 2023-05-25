@@ -101,6 +101,7 @@ public class CubeMovement : MonoBehaviour
         if (other.CompareTag("JumpPad"))
         {
             rb.AddForce(new Vector3(0, jumpPad, 0), ForceMode.Impulse);
+            SoundManagerScript.PlaySound("jumpPadsound");
         }
         if (other.CompareTag("Dash"))
         {
