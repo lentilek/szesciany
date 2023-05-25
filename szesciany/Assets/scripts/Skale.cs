@@ -18,9 +18,9 @@ public class Skale : MonoBehaviour
             transform.localScale = new Vector3( 1,1 ,1 );
         }
 
-         if (Input.GetKeyDown(KeyCode.C))
+         if (Input.GetKeyDown(KeyCode.Z))
         {
-            transform.localScale = new Vector3(1,1,1);
+            transform.localScale = new Vector3(0.5f,0.5f,0.5f);
         }
         
     }
