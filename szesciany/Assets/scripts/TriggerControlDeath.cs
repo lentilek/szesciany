@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class TriggerControlDeath : MonoBehaviour
 {
     public ParticleSystem death;
-    public float howLong = 3; 
+    public float howLong = 3;
+    public Skale scale;
 
     [SerializeField] GameObject player;
     [SerializeField] Transform spawnPoint;
@@ -14,7 +15,7 @@ public class TriggerControlDeath : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.gameObject.SetActive(false);
+            player.SetActive(false);
  
             death.Play();
             StartCoroutine(IsDead());
@@ -25,6 +26,8 @@ public class TriggerControlDeath : MonoBehaviour
     void RespawnPoint()
     {
         player.transform.position = spawnPoint.transform.position;
+        player.transform.localScale = new Vector3(1, 1, 1);
+        scale.canBeSmall= true;
         player.SetActive(true);
     }
 

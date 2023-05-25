@@ -6,11 +6,16 @@ public class Skale : MonoBehaviour
 {
     private float timeSmall = 2f;
     private float betweenTime = 7f;
-    private bool canBeSmall = true;
+    public bool canBeSmall;
 
-     void Update()
+    private void Start()
     {
-         if (Input.GetKeyDown(KeyCode.Z) && canBeSmall)
+        transform.localScale = new Vector3(1, 1, 1);
+        canBeSmall= true;
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z) && canBeSmall)
         {
             transform.localScale = new Vector3(0.5f,0.5f,0.5f);
             StartCoroutine(Small());
