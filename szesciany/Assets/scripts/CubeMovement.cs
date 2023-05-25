@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -12,6 +13,15 @@ public class CubeMovement : MonoBehaviour
     public float speedCoolDown;
     public float jumpPad;
 
+    //do dasha
+    public float dash;
+    public GameObject DashDestroy;
+    private float dashTime = 0.5f;
+    private bool isDashing = false;
+    private int dashMax = 3;
+    private int dashCounter = 0;
+    public TextMeshProUGUI dashUI;
+
     public float speed2 = 0.5f; // speed in air
     public Rigidbody rb; //initialize Rigidbody component
 
@@ -22,6 +32,7 @@ public class CubeMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>(); //references to the rigidbody comp
         normalSpeed = speed1;
+        dashUI.text = dashCounter.ToString();
     }
 
     void Update()
@@ -39,6 +50,20 @@ public class CubeMovement : MonoBehaviour
             rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse); //on each frame it adds this value of Y to the cube
             cubeIsOnTheGround = false; //whenever we press SPACE cube ISNT on the ground
         }
+        //dash
+        if (Input.GetKeyDown(KeyCode.C) && dashCounter < dashMax)
+        {
+            rb.AddForce(new Vector3(0, 0, dash), ForceMode.Impulse);
+            isDashing = true;
+            dashCounter++;
+            dashUI.text = dashCounter.ToString();
+            StartCoroutine(DashTime());
+        }
+    }
+    IEnumerator DashTime()
+    {
+        yield return new WaitForSeconds(dashTime);
+        isDashing= false;
     }
 
     private void FixedUpdate()
@@ -87,14 +112,21 @@ public class CubeMovement : MonoBehaviour
         if (other.CompareTag("SpeedBoost"))
         {
             speed1 = boostedSpeed;
-            StartCoroutine("SpeedDuration");
+            StartCoroutine(SpeedDuration());
         }
         if (other.CompareTag("JumpPad"))
         {
             rb.AddForce(new Vector3(0, jumpPad, 0), ForceMode.Impulse);
+            SoundManagerScript.PlaySound("jumpPadsound");
         }
-
-
+        /*if (other.CompareTag("Dash"))
+        {
+            Destroy(DashDestroy);
+        }*/
+        if (isDashing && other.CompareTag("Destroy"))
+        {
+            DashDestroy.SetActive(false);
+        }
     }
 
     IEnumerator SpeedDuration() //allows you to time something, do something after a certain amount of time
@@ -102,6 +134,8 @@ public class CubeMovement : MonoBehaviour
         yield return new WaitForSeconds(speedCoolDown); //its basically saying to this and go into here, wait for an amount of seconds set and then to this
         speed1 = normalSpeed;
     }
+    
+
 
 
 

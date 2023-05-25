@@ -4,27 +4,18 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public float howLongOpen = 5; // ile jest otwarte
-    public float timer = 0; // ile czasu zosta³o do zamkniêcia
+    public float howLongOpen = 5f; // ile jest otwarte
     public GameObject toOpen;
-    public bool isOpen = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        isOpen= true;
-        timer = 0;
         toOpen.SetActive(false);
+        StartCoroutine(PressurePlateWait());
     }
-    private void Update()
+
+    IEnumerator PressurePlateWait()
     {
-        if(isOpen)
-        {
-            timer += Time.deltaTime;
-            if(timer >= howLongOpen)
-            {
-                isOpen = false;
-                toOpen.SetActive(true);
-            }
-        }
+        yield return new WaitForSeconds(howLongOpen);
+        toOpen.SetActive(true);
     }
 }

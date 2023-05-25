@@ -6,40 +6,40 @@ using UnityEngine.SceneManagement;
 public class TriggerControlDeath : MonoBehaviour
 {
     public ParticleSystem death;
-    public float timer = 0;
-    public float howLong = 3; 
-    public bool isDead = false;
+    public float howLong = 3;
+    private Skale scale;
 
     [SerializeField] GameObject player;
     [SerializeField] Transform spawnPoint;
+    private void Start()
+    {
+        scale = player.GetComponent<Skale>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            isDead = true;
-            timer = 0;
-            other.gameObject.SetActive(false);
+            player.SetActive(false);
  
             death.Play();
-        }
-
-    }
-    private void Update()
-    {
-        if(isDead)
-        {
-            timer += Time.deltaTime;
-            if(timer >= howLong)
-            {
-                RespawnPoint();
-            }
+            StartCoroutine(IsDead());
+            SoundManagerScript.PlaySound("deathsound");
         }
     }
 
     void RespawnPoint()
     {
         player.transform.position = spawnPoint.transform.position;
+        player.transform.localScale = new Vector3(1, 1, 1);
+        scale.canBeSmall= true;
         player.SetActive(true);
-        isDead= false;
+    }
+
+    IEnumerator IsDead()
+    {
+        yield return new WaitForSeconds(howLong);
+        RespawnPoint();
+        
     }
 }

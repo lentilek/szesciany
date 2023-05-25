@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-    public static AudioClip collectsound, deathsound, jumpsound, finishsound;
+    public static AudioClip collectsound, deathsound, jumpsound, finishsound, jumpPadsound;
     static AudioSource audioSrc;
     // Start is called before the first frame update
     void Start()
@@ -13,6 +13,7 @@ public class SoundManagerScript : MonoBehaviour
         deathsound = Resources.Load<AudioClip>("deathsound");
         jumpsound = Resources.Load<AudioClip>("jumpsound");
         finishsound = Resources.Load<AudioClip>("finishsound");
+        jumpPadsound = Resources.Load<AudioClip>("jumpPadsound");
 
         audioSrc = GetComponent<AudioSource>();
 
@@ -39,6 +40,9 @@ public class SoundManagerScript : MonoBehaviour
                 break;
             case "finishsound":
                 audioSrc.PlayOneShot(finishsound);
+                break;
+            case "jumpPadsound":
+                audioSrc.PlayOneShot(jumpPadsound);
                 break;
         }
     }

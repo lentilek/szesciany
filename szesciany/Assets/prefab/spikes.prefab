@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1622841218586765231}
   - component: {fileID: 91453926898629413}
   - component: {fileID: 1702898402647292722}
-  - component: {fileID: -2085519323898512594}
   m_Layer: 0
   m_Name: spikes
   m_TagString: Ground
@@ -111,24 +110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   death: {fileID: 7053568329747278983}
-  timer: 0
   howLong: 3
-  isDead: 0
   player: {fileID: 0}
   spawnPoint: {fileID: 0}
---- !u!65 &-2085519323898512594
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974326788540221050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 0.70730305, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &8271274961978383814
 PrefabInstance:
   m_ObjectHideFlags: 0
