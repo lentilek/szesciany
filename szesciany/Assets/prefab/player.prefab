@@ -131,9 +131,10 @@ MonoBehaviour:
   speed1: 0.65
   boostedSpeed: 2
   speedCoolDown: 1
-  jumpPad: 25
+  jumpPad: 40
   dash: 50
   DashDestroy: {fileID: 0}
+  dashUI: {fileID: 0}
   speed2: 0.3
   rb: {fileID: 3433895275019099595}
   cubeIsOnTheGround: 1
