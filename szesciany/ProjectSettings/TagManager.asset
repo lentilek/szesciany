@@ -8,6 +8,7 @@ TagManager:
   - SpeedBoost
   - JumpPad
   - Dash
+  - Destroy
   layers:
   - Default
   - TransparentFX

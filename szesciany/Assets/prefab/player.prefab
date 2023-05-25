@@ -132,7 +132,7 @@ MonoBehaviour:
   boostedSpeed: 2
   speedCoolDown: 1
   jumpPad: 25
-  dash: 0
+  dash: 50
   DashDestroy: {fileID: 0}
   speed2: 0.3
   rb: {fileID: 3433895275019099595}

@@ -9,6 +9,7 @@ public class CameraControl : MonoBehaviour
     public float pLerp = .02f;
     public float rLerp = .01f;
     public LoadMap2 LM;
+    public PauseMenu PM;
 
     private void FixedUpdate()
     {
@@ -16,12 +17,12 @@ public class CameraControl : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, camTarget.rotation, rLerp);
 
 
-        if (Input.GetMouseButtonDown(0) && !LM.UI)
+        if (Input.GetMouseButtonDown(0) && !LM.UI && !PM.isPaused)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        if(LM.UI)
+        if(LM.UI || PM.isPaused)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
