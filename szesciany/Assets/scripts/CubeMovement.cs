@@ -129,6 +129,14 @@ public class CubeMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (isDashing && other.CompareTag("Destroy"))
+        {
+            DashDestroy.SetActive(false);
+        }
+    }
+
     IEnumerator SpeedDuration() //allows you to time something, do something after a certain amount of time
     {
         yield return new WaitForSeconds(speedCoolDown); //its basically saying to this and go into here, wait for an amount of seconds set and then to this
