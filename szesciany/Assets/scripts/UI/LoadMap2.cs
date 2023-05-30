@@ -23,6 +23,7 @@ public class LoadMap2 : MonoBehaviour
         if (playerInventory.numberOfPickupsMeta >= meta.toCollect)
         {
             nextLvlUI.SetActive(true);
+            Time.timeScale = 0f;
             UI = true;
             timer.text = "Time Left: " + time.time.ToString();
             points.text = "Points: " + pi.numberOfPickupsGold.ToString();
