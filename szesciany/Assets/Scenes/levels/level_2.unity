@@ -721,6 +721,7 @@ Transform:
   - {fileID: 1868301485}
   - {fileID: 876808521}
   - {fileID: 984145691}
+  - {fileID: 1058534225}
   - {fileID: 308718707}
   - {fileID: 1181562454}
   - {fileID: 1315953686}
@@ -729,7 +730,6 @@ Transform:
   - {fileID: 1319586867}
   - {fileID: 661662834}
   - {fileID: 1288642532}
-  - {fileID: 1058534225}
   - {fileID: 1685332111}
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -2556,7 +2556,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   death: {fileID: 646458701}
   howLong: 0
-  scale: {fileID: 671925714}
   player: {fileID: 671925711}
   spawnPoint: {fileID: 1438171990}
 --- !u!65 &1018122867
@@ -5282,6 +5281,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 513187174918738698, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
+      propertyPath: toLoad
+      value: level_2
+      objectReference: {fileID: 0}
     - target: {fileID: 1364226158971005037, guid: 93111086d2b8d0240bef5b393173b3bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -10,7 +10,6 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI timerTxt;
     public string toLoad;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(Timing());
@@ -20,10 +19,17 @@ public class Timer : MonoBehaviour
     {
         do
         {
-            timerTxt.text = time.ToString();
+            //timerTxt.text = time.ToString();
+            Display();
             yield return new WaitForSeconds(1f);
             time--;
         } while (time >= 0);
         SceneManager.LoadScene(toLoad);
+    }
+    private void Display()
+    {
+        float minutes = Mathf.FloorToInt(time/ 60);
+        float seconds = Mathf.FloorToInt(time% 60);
+        timerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
