@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject controlsScreen;
     //load scene
     public void Play()
     {
@@ -16,5 +17,15 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         //Debug.Log("Quit");
+    }
+
+    public void Controls()
+    {
+        controlsScreen.SetActive(true);
+    }
+
+    public void BackToMM()
+    {
+        controlsScreen.SetActive(false);
     }
 }
