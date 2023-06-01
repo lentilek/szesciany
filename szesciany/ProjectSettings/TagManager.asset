@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - SpeedBoost
+  - JumpPad
+  - Dash
+  - Destroy
   layers:
   - Default
   - TransparentFX

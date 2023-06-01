@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: camTarget
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2237615684231170802}
-  m_LocalRotation: {x: 0.16582419, y: -0, z: -0, w: 0.98615533}
-  m_LocalPosition: {x: 0, y: 1.55, z: -4.69}
+  m_LocalRotation: {x: 0.16504757, y: 0, z: 0, w: 0.9862857}
+  m_LocalPosition: {x: 0, y: 3.25, z: -9.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7798968782344291308}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 19.09, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 19, y: 0, z: 0}
 --- !u!1 &2341496132667953804
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,9 +41,10 @@ GameObject:
   - component: {fileID: 3113529953907345462}
   - component: {fileID: 2061137258028763027}
   - component: {fileID: 4286958606180447065}
-  - component: {fileID: 3224510822584872915}
   - component: {fileID: 3496184943420900785}
   - component: {fileID: 3433895275019099595}
+  - component: {fileID: 5284899107544661454}
+  - component: {fileID: 7867031855484455181}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -58,7 +59,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2341496132667953804}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -115,19 +116,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3224510822584872915
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2341496132667953804}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3496184943420900785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,9 +128,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22197c8f34d014d4e95c380442231245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  rb: {fileID: 0}
+  speed1: 0.65
+  boostedSpeed: 2
+  speedCoolDown: 1
+  jumpPad: 40
+  dash: 50
+  DashDestroy: {fileID: 0}
+  dashUI: {fileID: 0}
+  speed2: 0.3
+  rb: {fileID: 3433895275019099595}
   cubeIsOnTheGround: 1
+  jumpForce: 23
 --- !u!54 &3433895275019099595
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -151,14 +147,40 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2341496132667953804}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
+  m_Mass: 2
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!64 &5284899107544661454
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2341496132667953804}
+  m_Material: {fileID: 13400000, guid: e48a4cec8985c9349b64e18b3bcf0026, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 1260e302f057e754594893098ced90ea, type: 3}
+--- !u!114 &7867031855484455181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2341496132667953804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c985befe594d16543a36553502a2c003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8903084139509429861
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,3 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turn: {x: 0, y: 0}
   sensitivity: 2
+  lookUpMax: 20
+  lookUpMin: -60
+  lookLeft: -90
+  lookRight: 90
