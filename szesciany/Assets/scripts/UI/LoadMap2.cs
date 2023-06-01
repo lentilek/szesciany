@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class LoadMap2 : MonoBehaviour
 {
     public PickableTypes meta;
-    public string toLoad = "level_2";
     public GameObject nextLvlUI;
     public Timer time;
     public PlayerInventory pi;
@@ -37,6 +36,13 @@ public class LoadMap2 : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene(toLoad);
+        if (SceneManager.GetActiveScene().buildIndex == 6) 
+        { 
+            SceneManager.LoadScene("MainMenu"); 
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

@@ -8,7 +8,6 @@ public class Timer : MonoBehaviour
 {
     public float time = 180f;
     public TextMeshProUGUI timerTxt;
-    public string toLoad;
 
     void Start()
     {
@@ -24,7 +23,7 @@ public class Timer : MonoBehaviour
             yield return new WaitForSeconds(1f);
             time--;
         } while (time >= 0);
-        SceneManager.LoadScene(toLoad);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     private void Display()
     {
